@@ -1,4 +1,5 @@
 import { Component } from "react";
+import PropTypes from 'prop-types';
 
 export default class TodoItem extends Component {
     constructor(props){
@@ -7,11 +8,12 @@ export default class TodoItem extends Component {
     }
 
     render() {
+        const {item, test} = this.props;
         return (
             <div 
             onClick = {this.handleSelfClick} 
-            dangerouslySetInnerHTML = {{__html: this.props.item}}
-            >                            
+            > 
+            {test} - {item}                           
             </div>
         )
     }
@@ -21,4 +23,12 @@ export default class TodoItem extends Component {
         clickFun(index);
         console.log('TodoItem::click myself')
     }
+}
+
+TodoItem.propTypes = {
+    key: PropTypes.number,
+    test: PropTypes.string.isRequired,
+    index: PropTypes.number,
+    item: PropTypes.string,
+    clickFun: PropTypes.func
 }
