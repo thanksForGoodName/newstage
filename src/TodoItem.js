@@ -1,5 +1,5 @@
 import { Component } from "react";
-import PropTypes from 'prop-types';
+//import PropTypes from 'prop-types';
 
 export default class TodoItem extends Component {
     constructor(props) {
@@ -25,14 +25,16 @@ export default class TodoItem extends Component {
     }
 }
 
-TodoItem.propTypes = {
-    key: PropTypes.number,
-    test: PropTypes.string.isRequired,
-    index: PropTypes.number,
-    item: PropTypes.string,
-    clickFun: PropTypes.func
-}
+//参数类型约束
+// TodoItem.propTypes = {
+//     key: PropTypes.number,
+//     test: PropTypes.string.isRequired,
+//     index: PropTypes.number,
+//     item: PropTypes.string,
+//     clickFun: PropTypes.func
+// }
 
-TodoItem.defaltProps = {
-    test: 'hello world'
-}
+//默认参数值
+// TodoItem.defaultProps = {
+//     test: 'hello world'
+// }
